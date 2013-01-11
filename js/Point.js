@@ -8,9 +8,10 @@ if (typeof(Number.prototype.toRad) === "undefined") {
 function Point(xValue,yValue)
 {
 	this.attributes = {
-		x : xValue,
-		y : yValue
-		R : 6371
+		latitude : parseFloat(xValue),
+		longitude : parseFloat(yValue),
+		R : 6371,
+		distance : 0
 	}
 }
 Point.prototype.set = function (key, value) {
@@ -22,10 +23,10 @@ Point.prototype.get = function (propKey) {
 };
 Point.prototype.distance = function(p) 
 {
-	var lat1 = this.x;
-	var lat2 = p.x;
-	var lon1 = this.y;
-	var lon2 = p.y;
+	var lat1 = this.get('latitude');
+	var lat2 = parseFloat(p.latitude);
+	var lon1 = this.get('longitude');
+	var lon2 = parseFloat(p.longitude);
 	var dLat = (lat2-lat1).toRad();
 	var dLon = (lon2-lon1).toRad();
 	var lat1 = lat1.toRad();
@@ -34,5 +35,6 @@ Point.prototype.distance = function(p)
 	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
 	        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-	return this.R * c;
+	this.set('distance',this.get('R') * c);
+	return this;
 }

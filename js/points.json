@@ -1,4 +1,4 @@
-[
+var points = [
 	{
 		"latitude": "58.73860",
 		"longitude": "-1.55731"
