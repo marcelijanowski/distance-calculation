@@ -19,5 +19,11 @@ calculation.js
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/!svn/ver/1040940/playground/travelnews/tnv4/pal/distance-calculation/js/calculation.js
+/!svn/ver/1041005/playground/travelnews/tnv4/pal/distance-calculation/js/calculation.js
+END
+render.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1041007/playground/travelnews/tnv4/pal/distance-calculation/js/render.js
 END

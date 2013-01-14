@@ -8,13 +8,11 @@ var listElement = document.getElementById('pointListing');
 				   '</tr>';
 
 	}
-	var diff = '<strong>Calculation & Sorting time:</strong>'+diff+' ms <br />';
 	var header = '<tr><th>Langitude</th><th>Longitude</th><th>Distance (km)</th></tr>';
-	string = diff+'<table>'+header+string+'</table>';
+	string = '<table>'+header+string+'</table>';
 	listElement.innerHTML = string;	
 
 	var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
-
 if(battery) {
 	listElement + 'Battery %'+battery.level * 100 + " %";
 }
