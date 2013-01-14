@@ -1,0 +1,18 @@
+var locations = [
+	{	//Lodon
+		"latitude": "51.507335",
+		"longitude": "-0.127683"
+	},
+	// {	//Cardiff
+	// 	"latitude": "51.481581",
+	// 	"longitude": "-3.17909"
+	// },
+	// {	//Manchester
+	// 	"latitude": "53.479251",
+	// 	"longitude": "-2.247926"
+	// },
+	// {	//Glasgow
+	// 	"latitude": "55.864237",
+	// 	"longitude": "-4.251806"
+	// }
+]
